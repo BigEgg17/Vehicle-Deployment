@@ -21,14 +21,14 @@ if (_playerNear) exitWith {
 	format["You cannot pack this %1 because there is another player closer to it than you!", _displayName] call dayz_rollingMessages;
 };
 
+[player, "repair", 0, false, 10] call dayz_zombieSpeak;
+[player, 10, true, (getPosATL player)] spawn player_alertZombies;
+
 _finished = true;
 	
 if (_animation) then {
 	_finished = [_displayName, "pack"] call _playerDoLoop;
 };
-
-[player, "repair", 0, false, 10] call dayz_zombieSpeak;
-[player, 10, true, (getPosATL player)] spawn player_alertZombies;
 
 if (_finished) then {
 	{
