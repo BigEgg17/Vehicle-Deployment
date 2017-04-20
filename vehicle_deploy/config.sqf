@@ -1,8 +1,4 @@
-if !(_deployInCombat) then {
-		if (player getVariable["inCombat", false]) exitWith {
-			_result = [false,format["You cannot deploy a %1 while you are in combat.", _displayName]];
-		};
-	};private["_deployInVehicle", "_deployOnLadder", "_deployOnOtherPlots", "_getDeployConfig", "_deployCheckRequirements"];
+private["_deployInVehicle", "_deployOnLadder", "_deployOnOtherPlots", "_getDeployConfig", "_deployCheckRequirements"];
 
 /***********************/
 /**** Configuration ****/
