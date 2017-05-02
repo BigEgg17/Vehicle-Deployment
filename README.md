@@ -46,7 +46,7 @@ Compatible with DayZ Epoch 1.0.6.1 +
    
   * In compiles.sqf, copy and paste the following (these two files will be created in the instructions below):
    ```sqf
-   if (isDedicated) then {
+   if (!isDedicated) then {
        fnc_usec_selfactions = compile preprocessFileLineNumbers "custom\fn_selfActions.sqf";
        player_selectSlot = compile preprocessFileLineNumbers "custom\ui_selectSlot.sqf";
    };
